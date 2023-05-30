@@ -1,5 +1,4 @@
 
-using Microsoft.Extensions.Options;
 using System.Text.Json.Serialization;
 using USZO_EB.Models;
 
@@ -13,14 +12,14 @@ namespace USZO_EB
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers().AddJsonOptions(x =>
-                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles); // AddControllers-hez hozz·adva az AddJsonOptions
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles); // AddControllers-hez hozz√°adva az AddJsonOptions
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<UszoebContext>(); // AddDbContext hogy ne kelljen ˙jradeklar·lni a contextet
+            builder.Services.AddDbContext<UszoebContext>(); // AddDbContext hogy ne kelljen √∫jradeklar√°lni a contextet
             
-            builder.Services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); }); // Cors minden engedÈlyezÈse
+            builder.Services.AddCors(c => { c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); }); // Cors minden enged√©lyez√©se
 
             var app = builder.Build();
             if (app.Environment.IsDevelopment())
@@ -32,12 +31,12 @@ namespace USZO_EB
             app.UseAuthorization();
             app.MapControllers();
             
-            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); // Cors haszn·lata
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); // Cors haszn√°lata
 
             app.Run();
 
             /*
-            1. lÈtrehozol egy asp.net core web api .NET 7.0 projektet
+            1. l√©trehozol egy asp.net core web api .NET 7.0 projektet
 
             2. Tools -> nuget package manager -> for solution
 
@@ -47,7 +46,7 @@ namespace USZO_EB
                 mysql.entityframeworkcore
 
             4. package manager consoleba:
-                Scaffold-DbContext "server=localhost;database=ADATB¡ZIS NEVE;user=root;password=;sslmode=none;" mysql.entityframeworkcore -outputdir Models ñf
+                Scaffold-DbContext "server=localhost;database=ADATB√ÅZIS NEVE;user=root;password=;sslmode=none;" mysql.entityframeworkcore -outputdir Models ‚Äìf
             */
         }
     }

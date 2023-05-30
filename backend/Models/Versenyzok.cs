@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.Json.Serialization;
-
-namespace USZO_EB.Models;
+﻿namespace USZO_EB.Models;
 
 public partial class Versenyzok
 {
