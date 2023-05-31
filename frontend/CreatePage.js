@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function CreatePage() {
+export default function CreatePage() {
   const navigate = useNavigate();
   const createFlag = async(event) => {
     event.preventDefault();

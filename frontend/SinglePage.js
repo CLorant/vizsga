@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect, useCallback } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 
-export function SinglePage() {
+export default function SinglePage() {
   const [flag, setFlag] = useState([]);
   const [fetchPending, setFetchPending] = useState();
   const params = useParams();

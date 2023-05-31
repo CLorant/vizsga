@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-export function ListPage() {
+export default function ListPage() {
   const[flags, setFlag] = useState([]);
   const[fetchPending, setFetchPending] = useState(true);
   
